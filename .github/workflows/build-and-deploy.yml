@@ -17,7 +17,7 @@ jobs:
       - name: 'Install'
         run: 'npm ci'
       - name: 'Lint'
-        run: 'npm run --prefix web lint'
+        run: 'npm run lint'
       - name: 'Deploy'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
