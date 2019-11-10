@@ -25,7 +25,12 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "?(linkedin|twitter|github).svg",
+                "input": "./node_modules/simple-icons/icons",
+                "output": "./assets/images"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -90,7 +95,12 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "?(linkedin|twitter|github).svg",
+                "input": "./node_modules/simple-icons/icons",
+                "output": "./assets/images"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -122,8 +132,13 @@
               "devServerTarget": "website:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "website"
 }

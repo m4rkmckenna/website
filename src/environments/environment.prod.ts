@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: true,
+  links: {
+    github: 'https://github.com/m4rkmckenna',
+    twitter: 'https://twitter.com/m4rkmckenna',
+    linkedin: 'https://linkedin.com/in/m4rkmckenna',
+  }
 };
