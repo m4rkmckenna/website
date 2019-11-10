@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng deploy --repo=https://github.com/m4rkmckenna/website.git --name=\"Mark McKenna\" --email=m4rkmckenna@gmail.com --cname=markmckenna.ie"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +19,9 @@
     "@angular/forms": "~8.2.13",
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
+    "@angular/pwa": "^0.803.18",
     "@angular/router": "~8.2.13",
+    "@angular/service-worker": "~8.2.13",
     "angular-cli-ghpages": "^0.6.0",
     "bulma": "^0.8.0",
     "rxjs": "~6.4.0",

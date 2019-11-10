@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {environment} from '../../../environments/environment';
 
 @Component({
@@ -8,9 +8,10 @@ import {environment} from '../../../environments/environment';
 })
 export class SocialComponent implements OnInit {
 
-  readonly links = environment.links
+  readonly links = environment.links;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 

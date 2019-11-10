@@ -1,0 +1,24 @@
+name: 'Build & Deploy'
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  web:
+    name: 'Build & Deploy Website'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Use Node 12.x'
+        uses: 'actions/setup-node@v1'
+        with:
+          node-version: '12.x'
+      - name: 'Checkout'
+        uses: 'actions/checkout@v1'
+      - name: 'Install'
+        run: 'npm ci'
+      - name: 'Lint'
+        run: 'npm run --prefix web lint'
+      - name: 'Deploy'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: 'npm run deploy'
