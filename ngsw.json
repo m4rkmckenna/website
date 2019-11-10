@@ -1,0 +1,92 @@
+{
+  "configVersion": 1,
+  "timestamp": 1573413402011,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.645e98cb78e4766000fb.js",
+        "/main-es5.645e98cb78e4766000fb.js",
+        "/manifest.webmanifest",
+        "/polyfills-es2015.2987770fde9daa1d8a2e.js",
+        "/polyfills-es5.6696c533341b95a3d617.js",
+        "/runtime-es2015.edb2fcf2778e7bf1d426.js",
+        "/runtime-es5.edb2fcf2778e7bf1d426.js",
+        "/styles.65dc42da5bd39cf9d1c4.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/github.svg",
+        "/assets/images/github/GitHub-Mark-120px-plus.png",
+        "/assets/images/github/GitHub-Mark-Light-120px-plus.png",
+        "/assets/images/linkedin.svg",
+        "/assets/images/linkedin/LI-In-Bug.png",
+        "/assets/images/linkedin/LI-Logo.png",
+        "/assets/images/twitter.svg",
+        "/assets/images/twitter/Twitter_Social_Icon_Rounded_Square_Color.svg",
+        "/assets/images/twitter/Twitter_Social_Icon_Rounded_Square_White.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "d7a15ebcde806b57cfeec9b1734592910338dcc1",
+    "/assets/icons/icon-144x144.png": "5c7132ddff2989f1a894d31ab1eda3796963f4ea",
+    "/assets/icons/icon-152x152.png": "8892f89b1a6de5f5319679ad99fdf8630c358a59",
+    "/assets/icons/icon-72x72.png": "71414063bd4fe43e2678f4a99130831488b3af25",
+    "/assets/icons/icon-96x96.png": "d8053a957d84cd69fc8a95cc4b1ac2fe5b6851e0",
+    "/assets/images/github.svg": "7655820c4f8b52a67eff3f186fb29812b4c9728b",
+    "/assets/images/github/GitHub-Mark-120px-plus.png": "8e4af8e0da1da6fb685e86c19afb5322d559a8ca",
+    "/assets/images/github/GitHub-Mark-Light-120px-plus.png": "5740f0d2ea93806516b9c646e6e166aa5c0b44d9",
+    "/assets/images/linkedin.svg": "e17db70cd39301cc66dd76e8973bbd0df32ebc7a",
+    "/assets/images/linkedin/LI-In-Bug.png": "5168d82a93b54634cfbbac8457e0fbba9ba19549",
+    "/assets/images/linkedin/LI-Logo.png": "3a7b129f78d931d850911d589a279a2e6663868a",
+    "/assets/images/twitter.svg": "de6755ea418bcc1ba201da9b130f40f9ae400fe3",
+    "/assets/images/twitter/Twitter_Social_Icon_Rounded_Square_Color.svg": "d045195486c4bfdbefd3e812e7297db69615484d",
+    "/assets/images/twitter/Twitter_Social_Icon_Rounded_Square_White.svg": "7ae6b9ed63871bc2d3f51ae6c80befe169db0d30",
+    "/favicon.ico": "b0498ecec027d0d757f05ec1e9891d5d6e0eb07a",
+    "/index.html": "0e7dbb29b670b808f9c11eaa95ebac3cc80322ad",
+    "/main-es2015.645e98cb78e4766000fb.js": "9bf53a506c0514f5c5bcb4a3030230953e081266",
+    "/main-es5.645e98cb78e4766000fb.js": "80301810ddf4ba2d989f2e74d089a0417b4d40b5",
+    "/manifest.webmanifest": "a37dc7333bb5d268e67c61f2864ef4056e4b1855",
+    "/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
+    "/polyfills-es5.6696c533341b95a3d617.js": "45c51483238468881240579c3fdecd19144cff17",
+    "/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/runtime-es5.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.65dc42da5bd39cf9d1c4.css": "3cee7a611704043b2b1f18aae4d4967dd15758a1"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
