@@ -8,6 +8,12 @@ export const environment = {
     github: 'https://github.com/m4rkmckenna',
     twitter: 'https://twitter.com/m4rkmckenna',
     linkedin: 'https://linkedin.com/in/m4rkmckenna',
+  },
+  analytics: {
+    google: {
+      enabled: false,
+      code: 'UA-151915787-1'
+    }
   }
 };
 
