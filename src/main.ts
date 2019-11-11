@@ -3,7 +3,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {AppModule} from './app/app.module';
 import {environment} from './environments/environment';
-import {hasOwnProperty} from 'tslint/lib/utils';
+import {Util} from './app/Util';
 
 if (environment.production) {
   enableProdMode();
@@ -26,9 +26,7 @@ function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
       script.src = `https://www.googletagmanager.com/gtag/js?id=${config.code}`;
       script.onload = () => {
         window['dataLayer'] = window['dataLayer'] || [];
-        const gtag = (...args: any[]) => window['dataLayer'].push(args);
-        gtag('js', new Date());
-        gtag('config', config.code);
+        Util.gtag('js', new Date());
         resolve();
       };
       script.onerror = () => {
@@ -42,4 +40,5 @@ function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
     }
   }));
 }
+
 /* tslint:enable:no-string-literal */
