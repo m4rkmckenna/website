@@ -16,6 +16,7 @@ platformBrowserDynamic()
 loadGoogleAnalytics(environment.analytics.google)
   .catch(err => console.error(err));
 
+
 /* tslint:disable:no-string-literal */
 function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
   return new Promise(((resolve, reject) => {
@@ -25,8 +26,14 @@ function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
       script.type = 'text/javascript';
       script.src = `https://www.googletagmanager.com/gtag/js?id=${config.code}`;
       script.onload = () => {
-        Util.gtag('js', new Date());
-        resolve();
+        setTimeout(
+          () => {
+            Util.gtag('js', new Date());
+            Util.gtag('config', environment.analytics.google.code, {page_path: location.pathname});
+            resolve();
+          },
+          1000
+        );
       };
       script.onerror = () => {
         script.remove();
