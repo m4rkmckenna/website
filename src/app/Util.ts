@@ -5,9 +5,8 @@ export class Util {
    */
   static gtag(...args: any[]) {
     /* tslint:disable:no-string-literal */
-    if (window.hasOwnProperty('dataLayer')) {
-      window['dataLayer'].push(args);
-    }
+    window['dataLayer'] = window['dataLayer'] || [];
+    window['dataLayer'].push(args);
     /* tslint:enable:no-string-literal */
   }
 

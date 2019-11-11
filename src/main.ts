@@ -25,7 +25,6 @@ function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
       script.type = 'text/javascript';
       script.src = `https://www.googletagmanager.com/gtag/js?id=${config.code}`;
       script.onload = () => {
-        window['dataLayer'] = window['dataLayer'] || [];
         Util.gtag('js', new Date());
         resolve();
       };

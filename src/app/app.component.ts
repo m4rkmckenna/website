@@ -17,16 +17,15 @@ export class AppComponent implements OnDestroy {
 
   constructor(private router: Router) {
     if (environment.analytics.google.enabled) {
-
+      router.events
+        .pipe(
+          takeUntil(this.destroy$),
+          filter(e => e instanceof NavigationEnd)
+        )
+        .subscribe((e: NavigationEnd) => {
+          Util.gtag('config', environment.analytics.google.code, {page_path: e.urlAfterRedirects});
+        });
     }
-    router.events
-      .pipe(
-        takeUntil(this.destroy$),
-        filter(e => e instanceof NavigationEnd)
-      )
-      .subscribe((e: NavigationEnd) =>
-        Util.gtag('config', environment.analytics.google.code, {page_path: e.urlAfterRedirects})
-      );
   }
 
   ngOnDestroy(): void {
