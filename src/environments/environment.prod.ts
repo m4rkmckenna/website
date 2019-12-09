@@ -6,9 +6,6 @@ export const environment = {
     linkedin: 'https://linkedin.com/in/m4rkmckenna',
   },
   analytics: {
-    google: {
-      enabled: true,
-      code: 'UA-151915787-1'
-    }
+    google: {enabled: true, code: 'UA-151915787-2'}
   }
 };

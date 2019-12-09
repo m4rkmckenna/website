@@ -3,7 +3,6 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {AppModule} from './app/app.module';
 import {environment} from './environments/environment';
-import {Util} from './app/Util';
 
 if (environment.production) {
   enableProdMode();
@@ -16,30 +15,20 @@ platformBrowserDynamic()
 loadGoogleAnalytics(environment.analytics.google)
   .catch(err => console.error(err));
 
-
 /* tslint:disable:no-string-literal */
 function loadGoogleAnalytics(config: { enabled: boolean, code: string }) {
+  // Util.gtag('js', new Date());
+  // Util.gtag('config', config.code);
   return new Promise(((resolve, reject) => {
     if (config.enabled) {
       const script = document.createElement('script');
       script.async = true;
-      script.type = 'text/javascript';
       script.src = `https://www.googletagmanager.com/gtag/js?id=${config.code}`;
-      script.onload = () => {
-        setTimeout(
-          () => {
-            Util.gtag('js', new Date());
-            Util.gtag('config', environment.analytics.google.code, {page_path: location.pathname});
-            resolve();
-          },
-          1000
-        );
-      };
       script.onerror = () => {
         script.remove();
         reject('Google analytics failed to load');
       };
-      document.getElementsByTagName('head')[0].appendChild(script);
+      document.head.appendChild(script);
     } else {
       console.warn('Google analytics disabled in this environment');
       resolve();
