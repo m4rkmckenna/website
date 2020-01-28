@@ -9,13 +9,17 @@ import {SocialComponent} from './main/social/social.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {GoogleAnalyticsErrorHandler} from './google-analytics.service';
+import { PostsComponent } from './posts/posts.component';
+import { PostedTimeAgoPipe } from './pipes/posted-time-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HeaderComponent,
-    SocialComponent
+    SocialComponent,
+    PostsComponent,
+    PostedTimeAgoPipe
   ],
   imports: [
     BrowserModule,

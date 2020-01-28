@@ -3,6 +3,7 @@ import {Subject} from 'rxjs';
 import {GoogleAnalyticsService} from './google-analytics.service';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter, takeUntil} from 'rxjs/operators';
+import {PostService} from './services/post.service';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class AppComponent implements OnDestroy {
 
   constructor(
     private googleAnalytics: GoogleAnalyticsService,
+    private ps: PostService,
     private router: Router
   ) {
     this.router.events
