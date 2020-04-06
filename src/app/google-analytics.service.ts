@@ -43,6 +43,7 @@ export class GoogleAnalyticsService {
 
 // tslint:enable:variable-name
 
+@Injectable()
 export class GoogleAnalyticsErrorHandler implements ErrorHandler {
 
 
