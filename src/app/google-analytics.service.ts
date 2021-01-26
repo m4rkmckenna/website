@@ -2,7 +2,7 @@ import {ErrorHandler, Injectable} from '@angular/core';
 import {NavigationEnd} from '@angular/router';
 import {environment} from '../environments/environment';
 
-// tslint:disable:variable-name
+/* eslint-disable @typescript-eslint/naming-convention,no-underscore-dangle,id-blacklist,id-match */
 @Injectable({
   providedIn: 'root'
 })
@@ -41,17 +41,8 @@ export class GoogleAnalyticsService {
 
 }
 
-// tslint:enable:variable-name
-
 @Injectable()
 export class GoogleAnalyticsErrorHandler implements ErrorHandler {
-
-
-  private emitException(description: string, fatal: boolean = false) {
-    if (environment.analytics.google.enabled) {
-      gtag('event', 'exception', {description, fatal});
-    }
-  }
 
   handleError(error: any): void {
     let description = 'unknown';
@@ -61,6 +52,12 @@ export class GoogleAnalyticsErrorHandler implements ErrorHandler {
       description = error.message;
     }
     this.emitException(description, true);
+  }
+
+  private emitException(description: string, fatal: boolean = false) {
+    if (environment.analytics.google.enabled) {
+      gtag('event', 'exception', {description, fatal});
+    }
   }
 
 }
