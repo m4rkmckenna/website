@@ -14,7 +14,7 @@ platformBrowserDynamic()
 
 
 const loadGoogleAnalytics = (config: { enabled: boolean; code: string }) =>
-  new Promise(
+  new Promise<void>(
     (resolve, reject) => {
       if (config.enabled) {
         const script = document.createElement('script');
